@@ -24,6 +24,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "rd-parse": "0.0.0"
+    "rd-parse": "0.0.1"
   }
 }

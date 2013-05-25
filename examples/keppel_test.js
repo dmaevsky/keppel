@@ -14,12 +14,11 @@ var dumpState = function(r) {
 
 try {
   var text = fs.readFileSync(process.argv[2], {encoding: 'utf-8'});
-  var parser = new Parser(Grammar);
-  var head = parser.input(text).parse();
+  var p = new Parser(Grammar);
+  var head = p.parse(text)[0];
   // console.log(dumpState(head));
   console.log(toHTML(head));
 }
 catch (err) {
   console.log(err.message);
-  console.log(err.$);
 }
